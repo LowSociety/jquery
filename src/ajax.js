@@ -303,7 +303,7 @@ jQuery.extend( {
 		processData: true,
 		async: true,
 		contentType: "application/x-www-form-urlencoded; charset=UTF-8",
-		m : "_",
+		cacheParam : "_",
 		/*
 		timeout: 0,
 		data: null,
