@@ -304,6 +304,7 @@ jQuery.extend( {
 		processData: true,
 		async: true,
 		contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+		cacheParam : "_",
 		/*
 		timeout: 0,
 		data: null,
@@ -603,7 +604,7 @@ jQuery.extend( {
 			// Add anti-cache in uncached url if needed
 			if ( s.cache === false ) {
 				cacheURL = cacheURL.replace( rts, "" );
-				uncached = ( rquery.test( cacheURL ) ? "&" : "?" ) + "_=" + ( nonce++ ) + uncached;
+				uncached = ( rquery.test( cacheURL ) ? "&" : "?" ) + s.cacheParam + "=" + ( nonce++ ) + uncached;
 			}
 
 			// Put hash and anti-cache on the URL that will be requested (gh-1732)
